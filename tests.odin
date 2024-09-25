@@ -78,6 +78,7 @@ valid_anagram :: proc(s1: string, s2: string) -> bool {
 	// guard clause
 	if len(s1) != len(s2) do return false
 
+        // NOTE: sorted() is a function I wrote myself
 	arr_1 := sorted(s1)
 	arr_2 := sorted(s2)
 	defer delete(arr_1)
